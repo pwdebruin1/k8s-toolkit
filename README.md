@@ -14,7 +14,8 @@ You can either execute a tool once and let the pod or deployment complete and cl
 
 Or you can deploy a pod/deployment with the container and execute commands, example:
 
-```cat <<EOF | kubectl create -f -
+```
+cat <<EOF | kubectl create -f -
 apiVersion: v1
 kind: Pod
 metadata:
@@ -24,7 +25,8 @@ spec:
   containers:
   - name: k8s-toolkit
     image: pwdebruin/k8s-toolkit
-EOF```
+EOF
+```
 
 `kubectl exec k8s-toolkit -it -- dig google.com`
 
