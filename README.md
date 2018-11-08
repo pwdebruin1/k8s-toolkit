@@ -16,4 +16,15 @@ Or you can deploy a pod/deployment with the container and execute commands, exam
 
 $ `kubectl exec k8s-toolkit -it -- dig google.com`
 
+```cat <<EOF | kubectl create -f -
+apiVersion: v1
+kind: Pod
+metadata:
+  name: k8s-toolkit
+  namespace: default
+spec:
+  containers:
+  - name: k8s-toolkit
+    image: pwdebruin/k8s-toolkit```
+
 Please note the deployment will complete in 360 seconds (5 min).
