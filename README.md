@@ -2,12 +2,12 @@
 
 This image contains some useful tools that you may require when troubleshooting various things in a Kubernetes cluster.
 
-List of tools:
+## List of tools:
 curl
 nc/netcat
 dig/host
 
-Usage:
+## Usage:
 You can either execute a tool once and let the pod or deployment complete and clean out, example:
 
 `kubectl run --image=pwdebruin/k8s-toolkit k8s-toolkit --rm=true -i -- curl google.com`
